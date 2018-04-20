@@ -23,5 +23,17 @@ namespace OdeToFood.Services
         {
             return _restaurants.OrderBy(r => r.Name);
         }
+
+        public Restaurant Get(int id)
+        {
+            return _restaurants.FirstOrDefault(x => x.Id == id);
+        }
+
+        public Restaurant Add(Restaurant restaurant)
+        {
+            restaurant.Id = _restaurants.Max(x => x.Id) + 1;
+            _restaurants.Add(restaurant);
+            return restaurant;
+        }
     }
 }
