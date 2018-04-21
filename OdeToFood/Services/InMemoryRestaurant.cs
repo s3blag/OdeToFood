@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 using OdeToFood.Models;
 
 namespace OdeToFood.Services
@@ -34,6 +33,11 @@ namespace OdeToFood.Services
             restaurant.Id = _restaurants.Max(x => x.Id) + 1;
             _restaurants.Add(restaurant);
             return restaurant;
+        }
+
+        public Restaurant Update(Restaurant restaurant)
+        {
+            throw new NotImplementedException();
         }
     }
 }

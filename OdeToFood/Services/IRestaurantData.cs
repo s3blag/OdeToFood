@@ -1,8 +1,5 @@
 ﻿using OdeToFood.Models;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace OdeToFood.Services
 {
@@ -13,5 +10,7 @@ namespace OdeToFood.Services
         Restaurant Get(int id);
 
         Restaurant Add(Restaurant restaurant);
+
+        Restaurant Update(Restaurant restaurant);
     }
 }
